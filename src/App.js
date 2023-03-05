@@ -5,6 +5,8 @@ function App() {
   const [balance, setBalance] = useState(0)
   useEffect(() => {
     console.log('https://accout-app-server.herokuapp.com/api/balance')
+    const a = axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    console.log(a)
     fetchBalance()
   }, [])
 
