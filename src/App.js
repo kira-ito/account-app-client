@@ -8,7 +8,7 @@ function App() {
   }, [])
 
   const fetchBalance = async () => {
-    const result = await axios.get('https://accout-app-server.herokuapp.com//api/balance')
+    const result = await axios.get('https://accout-app-server.herokuapp.com/api/balance')
     console.log(result.data)
     setBalance(result.data)
   }
