@@ -8,14 +8,18 @@ function App() {
   }, [])
 
   const fetchBalance = async () => {
+    const test = await axios.get('/api/balance')
+    console.log(test)
     const result = await axios.get('https://accout-app-server.herokuapp.com/api/balance')
     console.log(result.data)
+
     setBalance(result.data)
   }
 
   return (
     <div className="App">
       残高：{balance}
+      <h1>Hello World</h1>
     </div>
   );
 }
